@@ -91,3 +91,19 @@ The local record ID in Streamlit session state is a navigation convenience, not 
 - Python syntax compilation: passed for application, page, and test modules.
 - Visual browser testing and clean Windows extraction/launch: **not yet verified** in this build environment. Streamlit was not installed in the build environment, so do not describe the UI as fully visually tested.
 - Market-source URLs and current posting status still require a manual final review before public presentation.
+- ## 👥 Project Team — Tech Revolutionaries
+
+**Project:** Career Compass 3.0
+
+Built collaboratively by:
+
+1. **R. Venkata Mahidhar**
+2. **K. Kruthikha**
+3. **G. Sai Nandhini**
+4. **K. Manju**
+5. **M. Chandhana**
+
+### Our Mission
+To help students bridge the gap between academic learning and real-world industry requirements through career intelligence, skill-gap analysis, personalized learning roadmaps, and practical projects.
+
+**Together, we build solutions for students.**
