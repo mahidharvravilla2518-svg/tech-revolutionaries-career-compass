@@ -1,0 +1,26 @@
+year,region,energy_source,synthetic_energy_units
+2020,Region A,Solar,18
+2021,Region A,Solar,24
+2022,Region A,Solar,29
+2023,Region A,Solar,37
+2024,Region A,Solar,44
+2020,Region A,Wind,26
+2021,Region A,Wind,30
+2022,Region A,Wind,35
+2023,Region A,Wind,39
+2024,Region A,Wind,45
+2020,Region A,Coal,88
+2021,Region A,Coal,84
+2022,Region A,Coal,81
+2023,Region A,Coal,77
+2024,Region A,Coal,73
+2020,Region B,Solar,13
+2021,Region B,Solar,17
+2022,Region B,Solar,22
+2023,Region B,Solar,27
+2024,Region B,Solar,33
+2020,Region B,Wind,16
+2021,Region B,Wind,20
+2022,Region B,Wind,23
+2023,Region B,Wind,28
+2024,Region B,Wind,31

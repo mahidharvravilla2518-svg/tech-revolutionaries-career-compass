@@ -1,0 +1,217 @@
+{
+  "meta": {
+    "version": 1,
+    "last_updated": "2026-10-27",
+    "note": "These are recommended learning orders, not rigid prerequisites or guaranteed timelines. Students can revisit earlier stages, skip familiar material after demonstrating the skills, or adapt the route to a particular job description. Optional stages are marked in the interface."
+  },
+  "guidance": {
+    "Programming Fundamentals": {
+      "focus": "Variables, control flow, functions, collections, files, debugging, tests, and Git basics.",
+      "ready_when": "You can build a small program from a blank file, handle a bad input, test a few cases, and explain how it works.",
+      "purpose": "Build the coding habits that make later data and AI work easier."
+    },
+    "SQL and Database Skills": {
+      "focus": "SELECT and filtering, joins, grouping, constraints, schemas, and query reasoning.",
+      "ready_when": "You can answer a practical question with a multi-table query, explain the joins, and check the result for duplicates or missing rows.",
+      "purpose": "Learn to retrieve trustworthy information from structured data."
+    },
+    "Data Analysis and Storytelling": {
+      "focus": "Data quality, missing values, summaries, exploratory analysis, charts, and clear conclusions.",
+      "ready_when": "You can clean a small dataset, produce a meaningful chart, and explain one finding plus one limitation.",
+      "purpose": "Learn to understand data before trying to predict or automate with it."
+    },
+    "Statistics and Experimentation": {
+      "focus": "Descriptive statistics, probability, uncertainty, sampling, confidence intervals, and experiment design.",
+      "ready_when": "You can explain uncertainty in plain language, choose a reasonable comparison, and identify when a conclusion is not supported.",
+      "purpose": "Build the reasoning needed to evaluate evidence and models responsibly."
+    },
+    "AI and Machine Learning": {
+      "focus": "Baselines, train/test splits, regression and classification, suitable metrics, error analysis, and limitations.",
+      "ready_when": "You can compare a model with a simple baseline, avoid data leakage, and explain when the result should not be trusted.",
+      "purpose": "Move from describing data to building and evaluating predictive systems."
+    },
+    "Data Engineering and Pipelines": {
+      "focus": "Data formats, validation, repeatable transformations, rejected-row handling, logging, and automated checks.",
+      "ready_when": "Your pipeline can be rerun without creating duplicates, reports invalid records, and has tests for key assumptions.",
+      "purpose": "Turn one-off analysis into a dependable data workflow."
+    },
+    "Cybersecurity and Risk": {
+      "focus": "Start with networking and operating-system basics, then security fundamentals, threat modelling, defensive triage, and governance.",
+      "ready_when": "You can explain a defensive finding, identify supporting evidence and uncertainty, and recommend a proportionate next action.",
+      "purpose": "Learn to reason about systems, evidence, threats, and safe responses."
+    },
+    "LLMs and Generative AI": {
+      "focus": "Python and APIs, model behaviour, evaluation, retrieval and grounding, safety, cost, and monitoring.",
+      "ready_when": "You can build a small grounded application, test it with representative questions, inspect failure cases, and document its limits.",
+      "purpose": "Apply generative models to useful tasks while testing reliability, safety, and cost."
+    },
+    "Cloud and MLOps": {
+      "focus": "Git and command line, environments and APIs, containers, deployment, monitoring, reproducibility, and rollback basics.",
+      "ready_when": "Another person can reproduce your setup, run the service, see useful logs, and understand how failures are handled.",
+      "purpose": "Learn to make data and model workflows reproducible and maintainable."
+    },
+    "Communication and Data Storytelling": {
+      "focus": "Audience and objective, chart choice, evidence and caveats, short presentations, and feedback.",
+      "ready_when": "You can explain the problem, evidence, recommendation, and limitation clearly in a short presentation or report.",
+      "purpose": "Make technical work understandable and useful to the people who need to act on it."
+    },
+    "Green and Energy Data": {
+      "focus": "Data basics, energy and climate indicators, time-series analysis, and communicating uncertainty.",
+      "ready_when": "You can analyse a relevant indicator, state the data's limits, and avoid claiming that correlation proves cause.",
+      "purpose": "Apply data skills to energy, climate, and sustainability questions."
+    }
+  },
+  "pathways": {
+    "Programming Fundamentals": {
+      "title": "Start from the beginning",
+      "goal": "Build confidence writing and debugging small programs before adding specialised tools.",
+      "steps": [
+        "Programming Fundamentals"
+      ],
+      "next_after": [
+        "SQL and Database Skills",
+        "Data Analysis and Storytelling"
+      ]
+    },
+    "SQL and Database Skills": {
+      "title": "Learn to work with databases",
+      "goal": "Learn coding basics first, then retrieve and combine structured data.",
+      "steps": [
+        "Programming Fundamentals",
+        "SQL and Database Skills"
+      ],
+      "next_after": [
+        "Data Analysis and Storytelling",
+        "Data Engineering and Pipelines"
+      ]
+    },
+    "Data Analysis and Storytelling": {
+      "title": "Become a data analyst",
+      "goal": "Follow the practical flow from code to querying data, analysis, uncertainty, and communication.",
+      "steps": [
+        "Programming Fundamentals",
+        "SQL and Database Skills",
+        "Data Analysis and Storytelling"
+      ],
+      "next_after": [
+        "AI and Machine Learning",
+        "Data Engineering and Pipelines",
+        "Communication and Data Storytelling",
+        "Statistics and Experimentation"
+      ]
+    },
+    "Statistics and Experimentation": {
+      "title": "Build statistical reasoning",
+      "goal": "Start with code and data literacy, then study uncertainty and sound comparisons.",
+      "steps": [
+        "Programming Fundamentals",
+        "Data Analysis and Storytelling",
+        "Statistics and Experimentation"
+      ],
+      "next_after": [
+        "AI and Machine Learning",
+        "Green and Energy Data"
+      ]
+    },
+    "AI and Machine Learning": {
+      "title": "Become ready for machine learning projects",
+      "goal": "Learn to code, inspect data, reason about uncertainty, and only then build predictive models.",
+      "steps": [
+        "Programming Fundamentals",
+        "Data Analysis and Storytelling",
+        "Statistics and Experimentation",
+        "AI and Machine Learning"
+      ],
+      "next_after": [
+        "Cloud and MLOps",
+        "LLMs and Generative AI"
+      ]
+    },
+    "Data Engineering and Pipelines": {
+      "title": "Build reliable data pipelines",
+      "goal": "Move from programming and queries to repeatable, tested data workflows and deployment.",
+      "steps": [
+        "Programming Fundamentals",
+        "SQL and Database Skills",
+        "Data Analysis and Storytelling",
+        "Data Engineering and Pipelines"
+      ],
+      "next_after": [
+        "AI and Machine Learning",
+        "LLMs and Generative AI",
+        "Cloud and MLOps"
+      ]
+    },
+    "Cybersecurity and Risk": {
+      "title": "Explore cybersecurity and risk",
+      "goal": "Build basic coding confidence, then learn networking, operating systems, defensive security, and evidence-led response.",
+      "steps": [
+        "Programming Fundamentals",
+        "Cybersecurity and Risk"
+      ],
+      "next_after": [
+        "Cloud and MLOps",
+        "SQL and Database Skills"
+      ]
+    },
+    "LLMs and Generative AI": {
+      "title": "Build useful generative AI applications",
+      "goal": "Learn programming and data/model evaluation first, then build a grounded LLM application and prepare it for deployment.",
+      "steps": [
+        "Programming Fundamentals",
+        "Data Analysis and Storytelling",
+        "Statistics and Experimentation",
+        "AI and Machine Learning",
+        "LLMs and Generative AI"
+      ],
+      "next_after": [
+        "Communication and Data Storytelling",
+        "Cloud and MLOps"
+      ]
+    },
+    "Cloud and MLOps": {
+      "title": "Move toward cloud and MLOps",
+      "goal": "Learn programming, database and pipeline basics, then practise reproducible deployment. The AI/ML step is useful for model-focused MLOps, but can be skipped for a cloud-infrastructure focus.",
+      "steps": [
+        "Programming Fundamentals",
+        "SQL and Database Skills",
+        "Data Engineering and Pipelines",
+        "Cloud and MLOps"
+      ],
+      "optional_steps": [
+        "AI and Machine Learning"
+      ],
+      "next_after": [
+        "AI and Machine Learning",
+        "LLMs and Generative AI"
+      ]
+    },
+    "Communication and Data Storytelling": {
+      "title": "Explain data clearly",
+      "goal": "Practise analysing evidence first, then communicating findings and limitations to a specific audience.",
+      "steps": [
+        "Data Analysis and Storytelling",
+        "Communication and Data Storytelling"
+      ],
+      "next_after": [
+        "Statistics and Experimentation",
+        "AI and Machine Learning"
+      ]
+    },
+    "Green and Energy Data": {
+      "title": "Apply data skills to energy and climate",
+      "goal": "Build a data foundation, learn to reason about trends and uncertainty, then apply the workflow to energy or climate indicators.",
+      "steps": [
+        "Programming Fundamentals",
+        "Data Analysis and Storytelling",
+        "Statistics and Experimentation",
+        "Green and Energy Data"
+      ],
+      "next_after": [
+        "AI and Machine Learning",
+        "Data Engineering and Pipelines",
+        "Communication and Data Storytelling"
+      ]
+    }
+  }
+}

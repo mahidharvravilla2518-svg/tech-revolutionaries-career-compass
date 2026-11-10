@@ -1,0 +1,147 @@
+[
+  {
+    "profile_id": "AIC-001",
+    "fictional": true,
+    "student_name": "Ananya Rao",
+    "year_of_study": 2,
+    "degree": "B.Tech",
+    "branch": "AI&DS",
+    "python_skill_level": "beginner",
+    "skills": [
+      "basic Python syntax",
+      "variables",
+      "if/else",
+      "loops"
+    ],
+    "interests": [
+      "learning programming",
+      "building small projects"
+    ],
+    "favorite_subjects": [
+      "computer science"
+    ],
+    "career_goal": "not sure yet",
+    "project_experience": [
+      "simple calculator program"
+    ],
+    "profile_completeness": "complete",
+    "notes": "Fictional test profile; beginner-friendly steps."
+  },
+  {
+    "profile_id": "AIC-002",
+    "fictional": true,
+    "student_name": "Kiran Reddy",
+    "year_of_study": 2,
+    "degree": "B.Tech",
+    "branch": "AI&DS",
+    "python_skill_level": "intermediate",
+    "skills": [
+      "Python",
+      "basic SQL",
+      "descriptive statistics"
+    ],
+    "interests": [
+      "mathematics",
+      "statistics",
+      "data analysis",
+      "visualization"
+    ],
+    "favorite_subjects": [
+      "mathematics",
+      "statistics",
+      "DBMS"
+    ],
+    "career_goal": "data analyst",
+    "project_experience": [
+      "analyzed a small public dataset in a notebook"
+    ],
+    "profile_completeness": "complete",
+    "notes": "Fictional test profile; analytics and data storytelling."
+  },
+  {
+    "profile_id": "AIC-003",
+    "fictional": true,
+    "student_name": "Meera Sharma",
+    "year_of_study": 3,
+    "degree": "B.Tech",
+    "branch": "AI&DS",
+    "python_skill_level": "intermediate",
+    "skills": [
+      "Python",
+      "NumPy basics",
+      "pandas basics",
+      "linear algebra fundamentals"
+    ],
+    "interests": [
+      "artificial intelligence",
+      "machine learning",
+      "model evaluation"
+    ],
+    "favorite_subjects": [
+      "machine learning",
+      "mathematics"
+    ],
+    "career_goal": "machine learning engineer",
+    "project_experience": [
+      "trained a basic classification model for a class assignment"
+    ],
+    "profile_completeness": "complete",
+    "notes": "Fictional test profile; ML foundations and evaluation."
+  },
+  {
+    "profile_id": "AIC-004",
+    "fictional": true,
+    "student_name": "Arjun Das",
+    "year_of_study": 2,
+    "degree": "B.Tech",
+    "branch": "AI&DS",
+    "python_skill_level": "intermediate",
+    "skills": [
+      "Python",
+      "SQL",
+      "basic data structures",
+      "Git basics"
+    ],
+    "interests": [
+      "technology",
+      "solving practical problems",
+      "team projects"
+    ],
+    "favorite_subjects": [
+      "programming",
+      "DBMS"
+    ],
+    "career_goal": null,
+    "project_experience": [
+      "college mini-project with a small team"
+    ],
+    "profile_completeness": "complete_except_career_goal",
+    "notes": "Fictional test profile; offer multiple exploration paths."
+  },
+  {
+    "profile_id": "AIC-005",
+    "fictional": true,
+    "student_name": null,
+    "year_of_study": null,
+    "degree": "B.Tech",
+    "branch": "AI&DS",
+    "python_skill_level": null,
+    "skills": [],
+    "interests": [
+      "technology"
+    ],
+    "favorite_subjects": [],
+    "career_goal": null,
+    "project_experience": [],
+    "profile_completeness": "incomplete",
+    "missing_fields": [
+      "student_name",
+      "year_of_study",
+      "python_skill_level",
+      "skills",
+      "favorite_subjects",
+      "career_goal"
+    ],
+    "notes": "Fictional test profile; request missing information or mark guidance provisional."
+  }
+]

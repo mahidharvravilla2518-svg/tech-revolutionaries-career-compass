@@ -1,0 +1,61 @@
+[
+  {
+    "job_id": "amazon-bie-10408712",
+    "role": "Business Intelligence Engineer",
+    "employer": "Amazon",
+    "location": "Hyderabad, India",
+    "source_url": "https://www.amazon.jobs/en/jobs/10408712/business-intelligence-engineer-amazon-last-mile",
+    "source_title": "Business Intelligence Engineer, Amazon Last Mile",
+    "source_type": "employer_job_posting",
+    "checked_on": "2026-10-24",
+    "status": "source checked; live status can change",
+    "experience_level": "Experienced role; posting lists 2+ years for some tools and degree or equivalent experience",
+    "required_skills": [
+      "SQL",
+      "Python",
+      "data visualization",
+      "data modeling",
+      "data warehousing",
+      "ETL",
+      "statistical analysis"
+    ],
+    "preferred_skills": [
+      "AWS",
+      "Excel",
+      "data mining",
+      "business recommendations"
+    ],
+    "evidence_summary": "Employer posting describes SQL querying, Python scripting, data visualization, data modeling/warehousing and ETL. It also lists experience requirements, so it should not be presented as a fresher vacancy.",
+    "limitations": "A single employer posting is evidence for this specific role, not the whole market. Recheck the page before presenting it as currently open."
+  },
+  {
+    "job_id": "amazon-bie-10537339",
+    "role": "Business Intelligence Engineer, ISFX",
+    "employer": "Amazon",
+    "location": "Hyderabad, India",
+    "source_url": "https://www.amazon.jobs/en/jobs/10537339/business-intelligence-engineer-isfx",
+    "source_title": "Business Intelligence Engineer, ISFX",
+    "source_type": "employer_job_posting",
+    "checked_on": "2026-10-24",
+    "status": "source checked; live status can change",
+    "experience_level": "Experienced role; posting lists multiple years of experience",
+    "required_skills": [
+      "SQL",
+      "Python",
+      "data visualization",
+      "data modeling",
+      "data warehousing",
+      "ETL",
+      "statistical analysis",
+      "machine learning"
+    ],
+    "preferred_skills": [
+      "AWS",
+      "ML deployment",
+      "data mining",
+      "Excel"
+    ],
+    "evidence_summary": "Employer posting mentions production SQL, Python, data pipelines, dashboards, data modelling and some ML-related work. It explicitly asks for years of experience.",
+    "limitations": "This role may be unsuitable for a fresher; use it to identify longer-term skills, not as a placement promise."
+  }
+]

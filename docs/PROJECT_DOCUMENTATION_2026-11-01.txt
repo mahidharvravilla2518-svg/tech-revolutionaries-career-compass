@@ -1,0 +1,822 @@
+CAREER COMPASS 3.0 PROJECT DOCUMENTATION: PROBLEM STATEMENT, SOLUTION,
+FEATURES AND EXECUTION HISTORY Prepared: 31 October 2026 | Target
+release: 3 November 2026 Project folder: AI_DS_Career_Compass_3_0
+Estimated completion: 75% (reasoned estimate, not a measured metric)
+
+==================================================================== 1.
+PROJECT OVERVIEW
+====================================================================
+
+AI&DS Career Compass 3.0 is a student-first career-awareness and
+project-based learning platform for AI and Data Science students.
+
+Its purpose is to help students: - Understand their current skills,
+interests and learning position. - Explore career roles that may suit
+their profile. - Understand skills associated with those roles. -
+Compare their skills with selected employer job requirements. - Explore
+curated market signals, salary context and economic/technology shifts. -
+Identify learning gaps and choose practical projects. - Track learning
+tasks and continue working on them.
+
+Core promise: Learn useful skills, understand their possible market
+value, practise realistic problems, and build evidence of ability.
+
+This is a guidance and learning prototype. It does not promise a job,
+placement, salary, hiring outcome or guaranteed career success.
+
+==================================================================== 2.
+PROBLEM STATEMENT
+====================================================================
+
+Despite the availability of numerous learning resources, online
+platforms, courses and career opportunities, many students struggle to
+become employable and prepared for placements or jobs.
+
+Students may not know: - Which skills are useful in real-world work. -
+Which career paths exist and which may fit their interests. - What
+skills employers expect. - How the job market and technology landscape
+are changing. - How to connect classroom/theoretical learning with
+practical work. - How to demonstrate their ability through projects and
+evidence. - What they should learn or build next.
+
+The central problem is the gap between access to learning resources and
+practical career preparation. Having access to courses does not
+automatically give students direction, practical experience, employer
+awareness or proof of ability.
+
+The problem has several connected parts:
+
+1.  Career-direction confusion: students may not understand available
+    roles or which path fits them.
+2.  Skill-priority confusion: there are many languages, tools,
+    frameworks and technologies, making it difficult to choose what to
+    learn first.
+3.  Theory-to-practice gap: understanding a topic does not necessarily
+    mean being able to solve a practical problem.
+4.  Unclear employer expectations: students may not distinguish required
+    skills, preferred skills and skills they can genuinely demonstrate.
+5.  Changing market conditions: technology, business, policy and
+    economic shifts may change the value of skills and roles.
+6.  Weak evidence of ability: completing courses alone may not
+    demonstrate practical competence; students need projects, code,
+    reports, charts, demos and documentation.
+7.  Lack of a next-step plan: students may not know what to learn next
+    or in what order.
+8.  Misleading career/salary expectations: salary figures and market
+    claims can be misunderstood as guaranteed outcomes.
+
+The project focuses on this student employability and preparation
+problem. It does not claim to have measured unemployment or placement
+rates across colleges, tiers or all students. Any percentages or
+comparisons discussed during brainstorming are not project findings
+unless backed by a documented dataset and method.
+
+==================================================================== 3.
+PROPOSED SOLUTION AND HOW IT WORKS
+====================================================================
+
+The solution is a connected website/application workflow:
+
+1.  Student enters a profile.
+2.  The system compares the profile with a curated career catalogue.
+3.  The system displays career recommendations and explains why each
+    role may fit.
+4.  The student reviews matched and missing skills.
+5.  The student compares their skills with selected real job-description
+    requirements.
+6.  The student explores tracked skills, market signals, salary context
+    and economic shifts.
+7.  The student chooses a learning sequence or practical project in
+    Learning Studio.
+8.  The student adds project/learning tasks to My Progress.
+9.  The student updates task status and can attach an evidence URL.
+10. The student returns to continue learning and building evidence.
+
+The platform aims to connect profile, role, skills, employer evidence,
+market context, practical work and progress rather than simply listing
+courses.
+
+The career fit score is a profile-overlap indicator. It is not a hiring
+probability, placement prediction or guarantee.
+
+==================================================================== 4.
+STUDENT PROFILE
+====================================================================
+
+The profile form in app.py collects: - Display name. - Year of study. -
+Python skill level. - Skills the student says they can demonstrate. -
+Interests. - Favourite subjects. - Project experience/description. -
+Target career. - Preferred work style. - Weekly learning hours.
+
+These details feed the profile/recommendation/action-plan flow.
+
+Known limitation from code inspection: Python level, favourite subjects
+and project experience are collected but are not all used by the current
+recommendation scoring logic. Skills are mostly represented as
+selected/not selected, rather than detailed proficiency levels or
+independently verified evidence.
+
+==================================================================== 5.
+CAREER RECOMMENDATION ENGINE
+====================================================================
+
+Main logic: engine.py Career data: career_catalog.json
+
+The engine: - Normalises skill names using aliases. - Compares profile
+skills and interests with career requirements. - Calculates a fit
+score. - Explains reasons for a match. - Lists matched and missing
+skills. - Provides starter-project and learning guidance. - Uses year of
+study and weekly learning hours for guidance.
+
+Inspected scoring weights: - Skills overlap: 0.40. - Interests overlap:
+0.40. - Preferred work-style overlap: 0.10 when supplied. - Target-goal
+match: 0.10 when supplied. Optional weights are renormalised when
+optional profile fields are absent.
+
+The engine also contains job_skill_gap comparison logic, which
+distinguishes matched skills from skills that are “not reported or not
+assessed” and calculates a coverage percentage. A skill not mentioned in
+a job description should not automatically be treated as a skill the
+employer does not value.
+
+Six roles are currently in career_catalog.json: 1. Data Analyst. 2. BI
+Analyst. 3. Data Scientist. 4. Data Engineer. 5. ML Engineer. 6. Applied
+AI / Generative AI Developer.
+
+The first five are labelled established in the catalogue; Applied AI /
+Generative AI Developer is labelled emerging.
+
+Catalogue fields include role title/category, description, required
+skills, interests, work types, starter project, learning sources,
+job-market skill labels and caveats.
+
+Limitations: - The catalogue is a career guide, not a verified universal
+employer-requirements list. - Job-market skill labels are not posting
+counts or measured frequency. - Scoring weights are not empirically
+validated. - Skills are self-reported and not independently verified. -
+Some collected profile fields are not used in scoring. - Goal matching
+is relatively simple text matching. - Empty/missing inputs and other
+scoring edge cases need review.
+
+==================================================================== 6.
+YOUR RESULTS
+====================================================================
+
+File: pages/2_Your_Results.py
+
+Inspected features: - Career recommendations and fit scores. - Reasons
+for each recommendation. - Matched skills and missing skills. -
+Starter-project suggestions. - Learning guidance. - Employer evidence
+expanders and job-skill comparison. - A 30-day action plan. - Option to
+edit the profile.
+
+The page communicates that a fit score is not a hiring probability.
+
+Limitation: the active profile, recommendations and action plan are held
+in Streamlit session state. Refreshing or starting a new session may
+lose the displayed result state even though the assessment is saved in
+SQLite. Persistence/recovery should be verified.
+
+==================================================================== 7.
+JOB REQUIREMENTS / EMPLOYER COMPARISON
+====================================================================
+
+File: pages/3_Job_Requirements.py Data: job_requirements.json
+
+Purpose: show examples of employer skill expectations and compare them
+with the student’s profile.
+
+Current dataset contains two Amazon Business Intelligence Engineer
+postings in Hyderabad, checked 24 October 2026: - Amazon Last Mile
+Business Intelligence Engineer, ID amazon-bie-10408712. - Amazon ISFX
+Business Intelligence Engineer, ID amazon-bie-10537339.
+
+Skills represented across the postings include SQL, Python, data
+visualisation, data modelling, data warehousing, ETL, statistics,
+machine learning (in one posting), AWS, Excel, data mining, business
+recommendations and ML deployment (preferred in one posting).
+
+The records include employer, role, location, source URL, checked date,
+seniority/experience context, summary, required skills and preferred
+skills.
+
+Limitations: - Two postings from one employer and one city are a small
+sample. - They do not represent the entire market, all employers,
+locations or experience levels. - A missing skill in a posting is not
+proof that employers do not value it. - URLs, dates and posting status
+need final verification. - This is a dated snapshot, not a live
+job-board feed. - The app does not currently scrape live vacancies or
+calculate live vacancy counts.
+
+==================================================================== 8.
+MARKET EXPLORER
+====================================================================
+
+File: pages/6_Market_Explorer.py Data: market_signals.json
+
+Purpose: help students explore skills, roles, salary context and
+economic/technology changes that may influence skill value.
+
+Inspected features: - Search and filtering of tracked skills. - Skill
+explanations and use cases. - Related roles and skills. - Signal
+labels/scores. - Current signal descriptions. - Outlook through 2030. -
+Sector/opportunity information. - Role-based salary context. -
+Economic-shift explanations. - Source links and methodology/caveats.
+
+Tracked skill areas include Python, SQL, statistics, data engineering,
+machine learning, deep learning, NLP, MLOps, cloud and responsible AI.
+
+The market dataset snapshot is dated 27 October 2026. Its 1–5 signal
+scores are qualitative synthesis. They are not measured job-posting
+counts, hiring probabilities or a universal demand index.
+
+The project specification expects the page to distinguish: - Measured
+observations. - Published research/reports. - Qualitative synthesis. -
+Editorial hypotheses.
+
+Economic-shift information should explain what changed or may change,
+which roles/skills may be affected, why, whether it is
+observed/reported/hypothetical, the source/date, and uncertainty or
+alternative outcomes.
+
+Salary context: - Salary is role-based, not the price or guaranteed
+return of learning a skill. - Annual LPA ranges are the underlying
+context. - Monthly, weekly and hourly figures may be arithmetic
+conversions from annual gross salary. - Such conversions are not
+necessarily take-home pay or advertised hourly rates. - Sources should
+be checked for Indian fresher relevance, experience, location and
+date. - Salary ranges are not promises.
+
+Limitations: - Curated dated data, not live data. - 2030 outlook is
+uncertain and must not be presented as fact. - Sources need a final
+verification pass. - Qualitative scores must not be plotted or described
+as vacancy counts. - Any future measured-demand chart needs a repeatable
+method, date, source, query/selection rules, role, location, experience
+level, sample size and deduplication method.
+
+==================================================================== 9.
+LEARNING STUDIO
+====================================================================
+
+File: pages/7_Learning_Studio.py Data: learning_projects.json,
+learning_sequences.json, market_signals.json
+
+Purpose: connect learning with practical tasks and project work.
+
+Inspected features: - Learning pathways. - Prerequisite-aware sequence
+steps. - Readiness checks. - Daily missions. - Structured project
+briefs. - Synthetic practice dataset downloads. - Book/resource links. -
+Add project or sequence tasks to My Progress. - Skill and role
+context. - Limitations and next-step guidance.
+
+Intended project-brief structure: 1. Who has the problem and why it
+matters. 2. Data source and licence/usage, or a clear synthetic-data
+label. 3. Task/workflow. 4. Success criteria/rubric. 5. Deliverables
+such as code, tests, report, chart, demo and README. 6. Limitations,
+privacy, safety and failure modes. 7. Extension/next project. 8. Skills
+practised and relevant roles.
+
+Learning library datasets are synthetic practice data, not real business
+measurements, customer behaviour, job-market demand or job outcomes.
+Dataset themes in the folder include energy demo data, retail sales and
+security alert data.
+
+The learning library is intended to support Python, SQL, statistics,
+data cleaning, visualisation, machine learning, evaluation, deployment
+and responsible AI in prerequisite-aware order.
+
+Limitations: - Daily mission checkbox state is session-only and not
+durably persisted. - Pathway tasks can be added to progress, but the app
+does not automatically prove mastery. - The app does not independently
+evaluate every project deliverable. - Book links, editions and chapter
+references need verification. - Synthetic datasets must remain clearly
+labelled. - Progress is local and not synced across devices.
+
+==================================================================== 10.
+MY PROGRESS
+====================================================================
+
+File: pages/4_My_Progress.py Database: data/career_compass.db
+
+Inspected features: - Retrieve saved tasks. - Show task status counts
+and progress bar. - Change task status. - Add an evidence URL. - Save
+task updates. - Receive project and learning-sequence tasks from
+Learning Studio.
+
+Privacy/usability risks: - When no active student ID exists, the page
+may automatically select the latest student record. - On a shared
+computer, this could expose another student’s local records. - Recent
+local demo records may be visible. - Evidence URLs need validation and
+safe handling. - Status counts do not prove skill mastery. - The local
+SQLite prototype is not a secure multi-user deployment.
+
+==================================================================== 11.
+DATABASE AND DATA PROTECTION
+====================================================================
+
+File: database.py Database: data/career_compass.db
+
+Inspected SQLite tables:
+
+students: - Student ID, created timestamp, display name, year of study,
+profile JSON.
+
+assessments: - Student ID foreign key, created timestamp,
+recommendations JSON, action-plan JSON.
+
+progress_tasks: - Student ID foreign key, assessment ID foreign key,
+task title, detail, evidence URL, status, due week, updated timestamp.
+
+job_sources: - Job ID, employer, role, location, source URL, checked
+date, payload JSON.
+
+Important preservation note: The current project folder contains
+data/career_compass.db. Earlier continuity documentation said a database
+from the user’s earlier laptop/archive was not included in the available
+archive. Do not assume the current database is empty or overwrite it.
+Back it up before schema changes, migration or replacement. Keep the
+older project folder untouched as a fallback until the new version is
+verified.
+
+Database fix completed: The original connection helper returned a raw
+SQLite connection and did not reliably close it when used through a
+context manager. This caused Windows WinError32 temporary database
+file-lock errors in tests.
+
+database.py was changed to use a connection context manager that: -
+Creates the parent directory if needed. - Opens the SQLite connection. -
+Sets row_factory. - Enables foreign keys. - Yields the connection. -
+Commits on success. - Rolls back on failure. - Closes the connection in
+a finally block.
+
+This fixed the observed test file-lock errors.
+
+Data safety rules: - Never reset or silently migrate the database. -
+Back up before schema changes. - Tests must use temporary databases. -
+Tests must not modify the user’s actual database. - Do not package
+personal learner data, secrets or API keys in a public ZIP/repository.
+
+==================================================================== 12.
+OPTIONAL AI ACTION PLAN
+====================================================================
+
+File: ai_helper.py
+
+Inspected behaviour: - Checks whether OPENAI_API_KEY is configured. - If
+configured, attempts to generate a structured action plan using the
+OpenAI Responses API. - The inspected default model setting is
+gpt-5.5. - Sends profile and top recommendation summaries. - Attempts to
+parse JSON output. - Falls back to a local plan if no key is configured
+or the AI call fails.
+
+Fallback function: fallback_plan(profile, recommendations, reason=…) It
+creates a four-week plan based on the top role, missing skills and
+weekly learning hours.
+
+Requirement: the basic application must remain useful without an API
+key. AI assistance is optional.
+
+Limitations: - Runtime API-key flow has not been fully verified. - JSON
+validation is basic; deeper validation of weeks, fields and task hours
+is needed. - Weekly-hour assumptions need review. - Secrets must never
+be committed or included in a public package.
+
+==================================================================== 13.
+DEMO / TEST PROFILES
+====================================================================
+
+File: pages/5_Demo_Test_Profiles.py Data: test_profiles.json
+
+Purpose: display fictional profiles for demonstration and manual
+exploration.
+
+The inspected page is a viewer, not a full automated scenario runner. It
+does not currently assert expected recommendation scores or outcomes.
+Demo profiles should remain clearly fictional and separate from real
+learner records.
+
+Possible future enhancement: run the recommendation engine against
+fictional profiles without writing to the database.
+
+==================================================================== 14.
+APPLICATION AND DESIGN
+====================================================================
+
+Main file: app.py Theme file: ui_theme.py Framework: Streamlit
+
+Inspected application structure: - Page configuration. - Loads career
+catalogue and job requirements. - Initializes database and job-source
+records. - Homepage/hero and navigation. - Links to Market Explorer,
+Learning Studio and Job Requirements. - Student profile form. -
+Recommendation and action-plan generation. - Assessment saving. -
+Session-state management for active profile/results.
+
+Design direction in the project specification: - Welcoming, modern,
+credible and colourful. - Uncluttered; not a dull administrative form or
+exaggerated marketing page. - Warm neutral base with restrained
+indigo/purple, teal and coral. - Good spacing, typography, contrast,
+accessibility, icons and hierarchy. - Short homepage summaries; detailed
+information in expanders. - Clear next action. - Visible source/snapshot
+dates. - Honest loading, empty and error states. - No fake testimonials,
+user counts, placements, success stories or fake live indicators.
+
+Visual verification of every page has not yet been confirmed. Automated
+tests do not replace launching the app and inspecting the rendered UI.
+Some inspected pages/data contain text-encoding corruption that should
+be checked and corrected.
+
+==================================================================== 15.
+EXECUTION PROCESS COMPLETED SO FAR
+====================================================================
+
+Stage 1 - Preserve and improve existing project - Work proceeded from an
+existing Career Compass project and refreshed 3.0 folder rather than
+starting from zero. - The intent was to preserve the profile,
+career-fit, job-requirement, progress and database functionality. - The
+older project folder was retained as a fallback.
+
+Stage 2 - Review specifications and continuity - PROJECT_MASTER_SPEC.md
+was inspected. - BUILD_PROMPT.md was inspected as the detailed source of
+truth. - docs/PROJECT_CONTINUITY.md was inspected. - These documents
+describe the mission, features, data limitations, preservation rules and
+release expectations.
+
+Stage 3 - Inspect project structure and code The project folder and
+major files were inspected: - app.py, engine.py, database.py,
+ai_helper.py, ui_theme.py (theme file identified; full visual
+verification pending). - career_catalog.json, job_requirements.json,
+market_signals.json. - learning_projects.json, learning_sequences.json,
+test_profiles.json. - pages/2_Your_Results.py. -
+pages/3_Job_Requirements.py. - pages/4_My_Progress.py. -
+pages/5_Demo_Test_Profiles.py. - pages/6_Market_Explorer.py. -
+pages/7_Learning_Studio.py. - Tests and learning-library dataset
+folders.
+
+Stage 4 - Identify database connection issue - The initial automated
+test run reported four errors. - Errors were Windows WinError32
+file-lock problems involving temporary SQLite databases. - The database
+connection helper was found not to close connections reliably.
+
+Stage 5 - Fix database connection handling - database.py was updated to
+use a proper context manager. - Commit/rollback and final connection
+closure were handled. - This resolved the observed file-lock errors.
+
+Stage 6 - Run automated tests Python executable: C:-64.exe Python
+version: 3.14.7
+
+Command: “C:-64.exe” -m unittest discover -s tests -v
+
+Result after fix: 15 tests ran; 15 passed; result OK. Runtime was
+approximately 0.131 seconds.
+
+The plain “python” command was not recognised in the earlier PowerShell
+environment, so the full interpreter path was used.
+
+The passing tests verify the current automated test scope only. They do
+not prove market-data accuracy, salary validity, recommendation
+validity, visual quality, clean installation or production readiness.
+
+Stage 7 - Feature and risk review - Recommendation scoring and
+limitations were inspected. - Employer sample size and scope were
+reviewed. - Market signal definitions and salary caveats were
+reviewed. - Synthetic dataset use was identified. - Progress privacy and
+local database risks were identified. - AI fallback and output
+validation were reviewed. - Visual inspection and release checks were
+identified as remaining work.
+
+Stage 8 - Current inspection status At preparation time: - Major
+application modules and data files listed above were inspected. - All 15
+existing automated tests passed after the database fix. - Full visual
+verification remained pending. - design_notes.md was the next requested
+inspection item; its contents had not yet been supplied in the
+conversation. - README.md, requirements.txt, ui_theme.py, launch
+behaviour and release packaging still needed final review/verification
+as applicable. - No claim of complete release readiness should be made
+before those checks.
+
+==================================================================== 16.
+KNOWN LIMITATIONS AND HONEST PRODUCT BOUNDARIES
+====================================================================
+
+Not implemented as live services: - Real-time job-board scraping. - Live
+vacancy counts. - Cross-device user accounts/synchronisation. -
+Scheduled reminders. - Automatic ingestion of uploaded books. -
+Production multi-user deployment.
+
+Other limitations: - Only two employer job examples are included. -
+Market signals are curated and dated, not live. - Qualitative signal
+scores are not measured demand. - Career fit is not hiring
+probability. - Profile skills are largely self-reported. - Some profile
+fields are not used by the engine. - Recommendation weights are not
+empirically validated. - Salary ranges are not guarantees or take-home
+pay. - Synthetic learning data is not real-world evidence. - Daily
+mission completion is not durably saved. - Project deliverables are not
+automatically graded. - Local database and latest-student selection need
+privacy review. - Visual and clean-install verification remain pending.
+
+==================================================================== 17.
+PRIORITY WORK REMAINING
+====================================================================
+
+1.  Protect student data: Back up the SQLite database; review automatic
+    latest-student selection; separate demo and real records; validate
+    evidence URLs; ensure tests use temporary databases.
+
+2.  Improve recommendation quality: Decide how Python level, favourite
+    subjects and project experience should affect guidance; distinguish
+    self-reported from demonstrated skills; validate missing/empty
+    inputs and scoring edge cases; keep fit-score explanation visible.
+
+3.  Verify market and employer evidence: Reopen source links; verify
+    dates, role details, location and posting status; explain the
+    two-posting sample limitation; verify salary relevance and
+    arithmetic; keep forecasts uncertain and qualitative scores distinct
+    from vacancy counts.
+
+4.  Strengthen learning continuity: Verify adding and continuing
+    projects/pathway tasks; consider saving daily mission completion;
+    explain that marking a task complete does not automatically prove
+    mastery; verify datasets, source labels, rubrics and resource links.
+
+5.  Complete UI checks: Launch the app and inspect every page; check
+    layout, encoding, contrast, spacing, buttons, forms, empty/error
+    states and navigation; correct visible text corruption.
+
+6.  Complete release checks: Verify README.md, requirements.txt and
+    run_app.bat; test a clean extraction; prepare a complete ZIP;
+    exclude local database/personal records/secrets/API keys; retain the
+    old folder as fallback; document precisely what was tested.
+
+==================================================================== 18.
+DEFINITION OF DONE
+====================================================================
+
+Release-ready means all of the following are verified:
+
+1.  App starts from a clean extraction with clear Windows instructions.
+2.  Profile, recommendation, job-requirement and progress flows work.
+3.  Students can search tracked skills and understand signal meaning and
+    sources.
+4.  Salary context is dated, caveated and not presented as a promise.
+5.  At least one market/economic shift is explained with uncertainty.
+6.  A practical challenge includes data, deliverables and a rubric.
+7.  A challenge can be added to progress and continued later.
+8.  App works without an API key.
+9.  Automated tests pass, including tests that do not modify the user’s
+    database.
+10. UI is welcoming and documentation honestly explains future features
+    and limitations.
+
+==================================================================== 19.
+COMPLETION ESTIMATE AS OF 31 OCTOBER 2026
+====================================================================
+
+Overall estimated completion: approximately 75%.
+
+This is a reasoned estimate based on inspected features, code,
+documentation and test results. It is not a measured project metric.
+
+Indicative area estimates: - Core application/features: 90%. - Market
+research/evidence: 65%. - Career recommendation engine: 75%. - Learning
+Studio/projects: 85%. - Database/progress tracking: 75%. - UI/visual
+quality: 60%. - Testing/release packaging: 65%.
+
+The remaining work is mainly verification, privacy/data protection,
+market-source validation, recommendation improvements, visual checks and
+clean release packaging.
+
+Target: release-ready by 3 November 2026. Reliability and truthful
+presentation take priority over adding unnecessary features.
+
+==================================================================== 20.
+PRESENTATION-READY EXPLANATION
+====================================================================
+
+“AI&DS Career Compass 3.0 is a student-focused career guidance and
+project-learning platform. Many students have access to courses and
+learning resources but still struggle to understand which skills matter,
+which career paths suit them, what employers ask for, and how to prove
+their practical ability. Our platform connects student profiling, career
+recommendations, job-skill comparison, curated market information,
+structured project challenges and progress tracking. It helps students
+turn learning into practical evidence while clearly explaining the
+limits of market data and avoiding job or salary guarantees.”
+
+Problem-to-solution mapping: - Unclear career direction -> Profile-based
+career recommendations. - Confusion about skills -> Career catalogue and
+Market Explorer. - Unclear employer expectations -> Job Requirements
+comparison. - Gap between theory and practice -> Learning Studio
+projects and datasets. - No structured next step -> Learning sequences
+and action plan. - Difficulty continuing learning -> My Progress
+tracker. - Risk of misleading market claims -> Dated sources, evidence
+labels, caveats and uncertainty.
+
+Do not claim: - Guaranteed placement/job outcomes. - Prediction of who
+will be hired. - Live vacancies or real-time job scraping. - Qualitative
+scores are job-posting counts. - Synthetic datasets are real company
+data. - Salary figures are guaranteed or take-home pay. -
+Production-ready multi-user operation. - Every page has passed visual
+testing before it has actually been checked.
+
+==================================================================== 21.
+PROJECT FILE MAP
+====================================================================
+
+Application: - app.py
+
+Core logic/services: - engine.py - ai_helper.py - database.py -
+ui_theme.py
+
+Career/market data: - career_catalog.json - job_requirements.json -
+market_signals.json - test_profiles.json
+
+Learning data: - learning_projects.json - learning_sequences.json -
+learning_library/README.md - learning_library/datasets/
+
+Pages: - pages/2_Your_Results.py - pages/3_Job_Requirements.py -
+pages/4_My_Progress.py - pages/5_Demo_Test_Profiles.py -
+pages/6_Market_Explorer.py - pages/7_Learning_Studio.py
+
+Tests: - tests/test_engine.py - tests/test_learning_projects.py -
+tests/test_learning_sequences.py - tests/test_market_data.py
+
+Documentation/setup: - PROJECT_MASTER_SPEC.md - BUILD_PROMPT.md -
+docs/PROJECT_CONTINUITY.md - README.md - requirements.txt -
+run_app.bat - .env.example - .gitignore
+
+Local database: - data/career_compass.db
+
+==================================================================== 22.
+FINAL SUMMARY
+====================================================================
+
+AI&DS Career Compass 3.0 addresses the gap between access to learning
+resources and practical career preparation. It helps students understand
+their profile, explore roles, interpret employer and market information,
+identify skill gaps, practise through structured projects and track next
+steps.
+
+The current prototype contains a Streamlit application, profile form,
+career recommendation engine, employer skill comparisons, Market
+Explorer, Learning Studio, synthetic practice datasets, SQLite progress
+tracking, optional AI action planning and automated tests.
+
+A database connection issue was identified and fixed. After the fix, all
+15 existing automated tests passed.
+
+The project is not yet fully verified. Visual inspection, market-source
+checks, privacy review, recommendation improvements, launch testing and
+clean release packaging remain. It should be described honestly as a
+local prototype with curated dated information and synthetic learning
+datasets—not as a live job-market prediction system or placement
+guarantee.
+
+END OF DOCUMENT
+
+
+======================================================================
+25. RELEASE-HARDENING UPDATE — 1 NOVEMBER 2026
+======================================================================
+
+This section records the code and documentation changes made after the original project report. It supersedes the original test count and implementation status where the two differ.
+
+Source package used:
+CareerCompass3_Sequence_Update.zip
+
+The supplied source ZIP contained the application source files and tests, but did NOT contain data/career_compass.db. Work was performed in a separate copy extracted from that ZIP. No database from the user's computer was copied, replaced, reset, migrated, or opened. The release ZIP produced from this work intentionally excludes local SQLite databases and personal learner records.
+
+25.1 Database connection safety
+
+- database.py now provides a context-managed SQLite connection.
+- Every connection is closed in a finally block.
+- Successful operations commit; exceptions roll back and propagate.
+- Tables continue to use CREATE TABLE IF NOT EXISTS.
+- No destructive schema migration or database reset was added.
+- A new latest_assessment(student_id) function reads the latest saved assessment for an explicitly supplied student ID; it does not select a student automatically.
+
+25.2 Student record selection / privacy guard
+
+- My Progress no longer chooses the newest student record when no active profile exists.
+- Learning Studio no longer chooses the newest student record when no active profile exists.
+- Both pages require an explicitly active profile in the current browser session to save or view progress.
+- The recent-record listing was removed from My Progress to avoid casually displaying other local record names/details on a shared machine.
+- UI text explains that local session state is not authentication and that this prototype is not secure multi-user software.
+
+Important limitation: this is a guard against accidental automatic record selection, not a login system. The app does not provide authenticated student isolation.
+
+25.3 Evidence URL validation
+
+- Added validate_evidence_url() in engine.py.
+- Blank optional evidence links remain allowed.
+- Nonblank evidence links must be complete HTTP or HTTPS URLs.
+- The validator rejects other schemes, absent hosts, whitespace/control characters, malformed ports, embedded usernames/passwords, and links longer than 2,048 characters.
+- My Progress checks the URL before storing it.
+- UI warns that external links are not independently verified by Career Compass.
+
+25.4 Recommendation transparency card
+
+- Each recommendation now contains score_breakdown details for Skills, Interests, and any optional Preferred Work Style or Career Goal component.
+- Each component reports overlap percentage, effective weight percentage, and contribution points.
+- Effective displayed weights are normalised to 100 percent.
+- The original scoring formula and original weight assignments were retained.
+- The Results page displays a “Why this fit score?” expander.
+- Low-information profiles are marked provisional instead of making the fit score appear more conclusive than the inputs support.
+
+25.5 Use of additional profile fields
+
+- Python level, favourite subjects, and described project experience now affect guidance text.
+- Those fields do not change the numerical fit score.
+- Project descriptions are treated as self-reported context, not as independently verified skill evidence.
+- Results UI labels selected skills as self-reported and explains which profile fields do not affect the score.
+
+25.6 Saved assessment reload
+
+- Results page has a “Reload saved assessment for this active profile” action.
+- It reloads the latest assessment only for student_id already present in the current Streamlit session.
+- It does not search for another student or automatically pick the latest record in the database.
+- If the browser session has fully reset and student_id is lost, the current prototype cannot recover the student's identity automatically. This limitation is deliberate until a proper identity/access model exists.
+
+25.7 Market, employer, and learning evidence clarity
+
+- Market Explorer now displays the snapshot date prominently and labels 1–5 signals as qualitative synthesis, not live vacancy counts, live demand, or hiring probability.
+- The market hero text now describes a dated snapshot instead of “today's market signals”.
+- Job Requirements and Your Results pages call out the sample limitation: two dated examples from one employer, not a representative labour-market sample or live vacancy feed.
+- My Progress explains that status/evidence links are learner-reported and do not independently verify mastery.
+- Learning Studio states that daily mission checkboxes are session-only and self-reported.
+
+25.8 Automated test expansion
+
+Original supplied test suite: 15 tests.
+Updated test suite: 21 tests.
+
+Six new test cases cover:
+1. Transparent score breakdown and effective weights summing to 100 percent.
+2. Empty or missing profile handling.
+3. Python level, favourite subjects and project experience influencing guidance without changing the score.
+4. Evidence URL validation.
+5. Fictional demo profiles running through the engine without database writes.
+6. Assessment retrieval for an explicitly requested student ID only.
+
+Database tests use a temporary database path. Tests do not use the user's local data/career_compass.db.
+
+Test command in the build environment:
+python -m unittest discover -s tests -v
+
+Result: 21 tests ran; 21 passed.
+
+Python syntax compilation also passed for app.py, engine.py, ai_helper.py, database.py, ui_theme.py, pages/*.py, and tests/*.py.
+
+25.9 Changes to documentation
+
+Updated documentation files:
+- README.md
+- BUILD_PROMPT.md
+- PROJECT_MASTER_SPEC.md
+- design_notes.md
+- docs/PROJECT_CONTINUITY.md
+
+Added:
+- docs/RELEASE_HARDENING_2026-11-01.md
+
+The documentation separates implemented safeguards from work that remains deferred or unverified.
+
+25.10 Work not completed in this update
+
+The following have NOT been claimed as completed:
+- Browser-based visual testing of every page.
+- Clean Windows extraction and `run_app.bat` launch testing.
+- Manual re-opening of every market and employer source URL and confirming current posting status.
+- Daily mission persistence; checkbox remains session-only.
+- Authentication, secure multi-user access control, or cross-device sync.
+- A full evidence taxonomy such as course-only/project-backed/portfolio-linked/employer-verified.
+- PDF/CSV export of progress or action plans.
+- A dedicated demo-scenario dashboard (demo profiles are covered by automated engine tests only).
+- More employer postings across multiple employers, locations, and experience levels.
+- A measured job-posting sample or live job scraping.
+- Automated project grading or complex new recommendation ML.
+
+The build environment did not have Streamlit installed. Therefore Python compilation and automated tests were possible, but no rendered browser UI inspection was performed. This needs to be completed on the target Windows machine.
+
+25.11 Database protection when installing
+
+The release ZIP has no data/career_compass.db. If applying these source updates to an existing project folder on Windows, first close Streamlit, back up the existing `data/career_compass.db`, and keep the old project folder untouched as fallback. Extract into a new folder for the first test. Do not copy/migrate/replace the existing database automatically.
+
+25.12 Updated release status
+
+Implemented and automated-tested in the hardening copy:
+- Safe connection closing.
+- Explicit-session profile access (no latest-student auto-selection).
+- HTTP/HTTPS evidence link validation.
+- Explainable recommendation component breakdown.
+- Contextual guidance from Python level, favourite subjects, and described project experience without score changes.
+- Assessment reload for active session ID.
+- Stronger date, sample-size, and mastery caveats.
+- Expanded automated tests (21 passing).
+
+Still pending before calling the project fully release-verified:
+- UI visual audit.
+- Clean Windows extraction and launch.
+- Manual source-link verification.
+- Final end-to-end demo path on the target machine.
+
+The earlier approximately 75 percent completion estimate was made before these hardening changes. No new percentage is asserted here because visual and clean-install verification remain outstanding.

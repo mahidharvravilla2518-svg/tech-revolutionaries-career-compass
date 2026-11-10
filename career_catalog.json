@@ -1,0 +1,262 @@
+[
+  {
+    "id": "data_analyst",
+    "title": "Data Analyst",
+    "category": "established",
+    "description": "Uses data queries, analysis and visualization to help answer business or research questions.",
+    "required_skills": [
+      "Python",
+      "SQL",
+      "statistics",
+      "data visualization",
+      "problem solving"
+    ],
+    "interests": [
+      "data analysis",
+      "mathematics",
+      "business problem solving",
+      "explaining findings"
+    ],
+    "work_types": [
+      "analyzing data",
+      "business problem solving"
+    ],
+    "starter_project": "Analyze a public dataset, clean it, answer three questions and present the findings in a small dashboard.",
+    "sources": [
+      {
+        "title": "Microsoft Learn: Power BI training",
+        "url": "https://learn.microsoft.com/en-us/training/powerplatform/power-bi/"
+      },
+      {
+        "title": "Python documentation",
+        "url": "https://docs.python.org/3/"
+      }
+    ],
+    "job_market_skills": [
+      "SQL",
+      "Python",
+      "statistics",
+      "data visualization",
+      "spreadsheet analysis",
+      "communication"
+    ],
+    "evidence_note": "Career-level skill guide, not a guarantee of employer requirements. Compare against dated job postings."
+  },
+  {
+    "id": "bi_analyst",
+    "title": "Business Intelligence Analyst",
+    "category": "established",
+    "description": "Organizes and visualizes business data to support decisions and track performance.",
+    "required_skills": [
+      "SQL",
+      "data visualization",
+      "spreadsheet analysis",
+      "problem solving",
+      "communication"
+    ],
+    "interests": [
+      "business problem solving",
+      "data analysis",
+      "explaining findings"
+    ],
+    "work_types": [
+      "analyzing data",
+      "business problem solving"
+    ],
+    "starter_project": "Create a sales or student-performance dashboard from a public or synthetic dataset, with clear metrics and written conclusions.",
+    "sources": [
+      {
+        "title": "Microsoft Learn: Power BI training",
+        "url": "https://learn.microsoft.com/en-us/training/powerplatform/power-bi/"
+      }
+    ],
+    "job_market_skills": [
+      "SQL",
+      "Python",
+      "data visualization",
+      "data modeling",
+      "ETL",
+      "communication",
+      "spreadsheet analysis"
+    ],
+    "evidence_note": "Career-level skill guide, not a guarantee of employer requirements. Compare against dated job postings."
+  },
+  {
+    "id": "data_scientist",
+    "title": "Data Scientist",
+    "category": "established",
+    "description": "Uses statistics, programming and analytical methods to investigate data and develop models.",
+    "required_skills": [
+      "Python",
+      "statistics",
+      "SQL",
+      "data cleaning",
+      "machine learning",
+      "problem solving"
+    ],
+    "interests": [
+      "data analysis",
+      "mathematics",
+      "research",
+      "AI",
+      "experimentation"
+    ],
+    "work_types": [
+      "analyzing data",
+      "mathematics and research",
+      "building AI models"
+    ],
+    "starter_project": "Explore a public dataset, define a question, clean the data, build a simple baseline model and explain its limitations.",
+    "sources": [
+      {
+        "title": "pandas documentation",
+        "url": "https://pandas.pydata.org/docs/"
+      },
+      {
+        "title": "scikit-learn documentation",
+        "url": "https://scikit-learn.org/stable/"
+      }
+    ],
+    "job_market_skills": [
+      "Python",
+      "SQL",
+      "statistics",
+      "machine learning",
+      "data cleaning",
+      "experimentation"
+    ],
+    "evidence_note": "Career-level skill guide, not a guarantee of employer requirements. Compare against dated job postings."
+  },
+  {
+    "id": "data_engineer",
+    "title": "Data Engineer",
+    "category": "established",
+    "description": "Builds and maintains reliable processes and systems that collect, transform and prepare data for use.",
+    "required_skills": [
+      "Python",
+      "SQL",
+      "databases",
+      "data pipelines",
+      "problem solving"
+    ],
+    "interests": [
+      "data systems",
+      "building software",
+      "automation",
+      "problem solving"
+    ],
+    "work_types": [
+      "building software",
+      "analyzing data"
+    ],
+    "starter_project": "Build a small pipeline that loads public CSV data, validates it, transforms it and stores it in a local database.",
+    "sources": [
+      {
+        "title": "PostgreSQL documentation",
+        "url": "https://www.postgresql.org/docs/"
+      },
+      {
+        "title": "Python documentation",
+        "url": "https://docs.python.org/3/"
+      }
+    ],
+    "job_market_skills": [
+      "Python",
+      "SQL",
+      "databases",
+      "data pipelines",
+      "ETL",
+      "cloud fundamentals"
+    ],
+    "evidence_note": "Career-level skill guide, not a guarantee of employer requirements. Compare against dated job postings."
+  },
+  {
+    "id": "ml_engineer",
+    "title": "Machine Learning Engineer",
+    "category": "established",
+    "description": "Develops, tests and integrates machine-learning models into software and data products.",
+    "required_skills": [
+      "Python",
+      "machine learning",
+      "statistics",
+      "data preparation",
+      "software development"
+    ],
+    "interests": [
+      "AI",
+      "mathematics",
+      "building AI models",
+      "building software",
+      "experimentation"
+    ],
+    "work_types": [
+      "building AI models",
+      "building software",
+      "mathematics and research"
+    ],
+    "starter_project": "Train and evaluate a simple classifier on a public dataset, document the baseline and make a small demo.",
+    "sources": [
+      {
+        "title": "scikit-learn documentation",
+        "url": "https://scikit-learn.org/stable/"
+      },
+      {
+        "title": "PyTorch tutorials",
+        "url": "https://pytorch.org/tutorials/"
+      }
+    ],
+    "job_market_skills": [
+      "Python",
+      "machine learning",
+      "statistics",
+      "software development",
+      "model evaluation",
+      "APIs"
+    ],
+    "evidence_note": "Career-level skill guide, not a guarantee of employer requirements. Compare against dated job postings."
+  },
+  {
+    "id": "applied_ai_developer",
+    "title": "Applied AI / Generative AI Developer",
+    "category": "emerging",
+    "description": "Builds applications that use AI models to help users complete specific tasks, with attention to reliability and evaluation.",
+    "required_skills": [
+      "Python",
+      "APIs",
+      "prompt design",
+      "software development",
+      "evaluation"
+    ],
+    "interests": [
+      "AI",
+      "building software",
+      "automation",
+      "experimentation",
+      "problem solving"
+    ],
+    "work_types": [
+      "building software",
+      "building AI models"
+    ],
+    "starter_project": "Build a small AI-assisted study tool, add input checks and a fallback, and test it against a set of example questions.",
+    "sources": [
+      {
+        "title": "OpenAI API documentation",
+        "url": "https://platform.openai.com/docs/"
+      },
+      {
+        "title": "Streamlit documentation",
+        "url": "https://docs.streamlit.io/"
+      }
+    ],
+    "job_market_skills": [
+      "Python",
+      "APIs",
+      "software development",
+      "evaluation",
+      "prompt design",
+      "deployment basics"
+    ],
+    "evidence_note": "Career-level skill guide, not a guarantee of employer requirements. Compare against dated job postings."
+  }
+]

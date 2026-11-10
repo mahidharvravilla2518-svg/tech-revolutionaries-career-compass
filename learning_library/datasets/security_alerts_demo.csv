@@ -1,0 +1,11 @@
+alert_id,asset_criticality,severity,evidence_confidence,exposure,review_status
+A001,High,Critical,High,Internet-facing,Needs review
+A002,Low,Medium,High,Internal,Needs review
+A003,High,High,Medium,Internet-facing,Needs review
+A004,Medium,Low,High,Internal,Reviewed
+A005,High,Medium,Low,Internet-facing,Needs review
+A006,Medium,High,High,Internal,Needs review
+A007,Low,High,Medium,Internal,Needs review
+A008,High,Critical,Medium,Internet-facing,Needs review
+A009,Medium,Medium,Low,Internal,Reviewed
+A010,Low,Low,High,Internal,Reviewed

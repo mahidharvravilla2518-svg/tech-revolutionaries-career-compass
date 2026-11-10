@@ -1,0 +1,601 @@
+{
+  "meta": {
+    "as_of": "2026-10-27",
+    "market": "India, with global outlook context",
+    "status": "Curated research snapshot; not a live job-posting feed",
+    "method_note": "The signal score is an editorial 1–5 synthesis from the cited reports and role relevance. It is not a count of vacancies, a statistical forecast, or a probability of getting hired. Re-check sources before using the numbers in a formal report."
+  },
+  "sources": [
+    {
+      "id": "wef2025",
+      "title": "World Economic Forum — Future of Jobs Report 2025",
+      "publisher": "World Economic Forum",
+      "published": "2025-01-08",
+      "url": "https://www.weforum.org/publications/the-future-of-jobs-report-2025/",
+      "finding": "Employers expect AI and big data, networks and cybersecurity, and technological literacy to be among the fastest-growing skills through 2030. Economic uncertainty, AI adoption, and the green transition are also drivers of change.",
+      "scope": "Global employer survey; outlook through 2030"
+    },
+    {
+      "id": "linkedin2026",
+      "title": "LinkedIn — Skills on the Rise: 2026",
+      "publisher": "LinkedIn",
+      "published": "2026-02-24",
+      "url": "https://news.linkedin.com/2026/Skills-on-the-rise-2026",
+      "finding": "LinkedIn's rising-skill analysis uses year-over-year skill acquisition and hiring success. Its global summary highlights LLMs, prompt engineering, AI/ML deployment, AI business strategy, stakeholder communication, and risk/compliance themes.",
+      "scope": "LinkedIn member data across 12 markets; Dec 2024–Nov 2025 compared with prior year"
+    },
+    {
+      "id": "payscale_da",
+      "title": "PayScale — Data Analyst Salary in India (2026)",
+      "publisher": "PayScale",
+      "published": "2026-07-10",
+      "url": "https://www.payscale.com/research/IN/Job%3DData_Analyst/Salary",
+      "finding": "Reported average base salary ₹577,472/year based on 2,389 salary profiles; the page also reports an entry-level total-compensation average of ₹413,462 based on 576 salaries.",
+      "scope": "Self-reported salary profiles; compensation definitions differ by metric"
+    },
+    {
+      "id": "flexiple_da",
+      "title": "Flexiple — Data Analyst Salary in India",
+      "publisher": "Flexiple",
+      "published": "2026-08",
+      "url": "https://flexiple.com/salary/data-analyst",
+      "finding": "Reports ₹5.9 lakh/year median all-level compensation and a middle-50% range of ₹4–9.3 lakh from 6,153 records.",
+      "scope": "Compensation records; all experience levels, India"
+    },
+    {
+      "id": "flexiple_de",
+      "title": "Flexiple — Data Engineer Salary in India",
+      "publisher": "Flexiple",
+      "published": "2026-08",
+      "url": "https://flexiple.com/salary/data-engineer",
+      "finding": "Reports an entry-level (0–3 years) median of ₹7.5 lakh/year and middle-50% range of ₹5–11.6 lakh from 2,179 records.",
+      "scope": "Compensation records; India, entry-level band"
+    },
+    {
+      "id": "flexiple_ds",
+      "title": "Flexiple — Data Scientist Salary in India",
+      "publisher": "Flexiple",
+      "published": "2026-08",
+      "url": "https://flexiple.com/salary/data-scientist",
+      "finding": "Reports ₹14.2 lakh/year median all-level compensation and a middle-50% range of ₹7.5–26.3 lakh from 1,867 records.",
+      "scope": "Compensation records; all experience levels, India"
+    },
+    {
+      "id": "instahyre_ml",
+      "title": "Instahyre — AI/ML Engineer Salary in India 2026",
+      "publisher": "Instahyre",
+      "published": "2026-05",
+      "url": "https://resources.instahyre.com/blog/ai-engineer-salary-in-india/",
+      "finding": "Reports broad fresher AI/ML engineering ranges that vary substantially by employer type and specialisation; the article gives ₹6–14 lakh/year as a broad entry-level range across its categories.",
+      "scope": "Instahyre's internal hiring data across 8,000+ technology roles in 2025–26; ranges vary by company type"
+    },
+    {
+      "id": "instahyre_ds",
+      "title": "Instahyre — Data Scientist Salary in India 2026",
+      "publisher": "Instahyre",
+      "published": "2026-05",
+      "url": "https://resources.instahyre.com/blog/data-scientist-salary-in-india/",
+      "finding": "Reports fresher data scientist ranges of roughly ₹6–10 lakh/year at many employers and higher ranges at top product firms.",
+      "scope": "Instahyre internal hiring data; company and role segmentation matters"
+    },
+    {
+      "id": "linkedin_india_2026",
+      "title": "LinkedIn News India — Skills on the Rise in India",
+      "publisher": "LinkedIn News India",
+      "published": "2026-02-23",
+      "url": "https://www.linkedin.com/news/story/skills-on-the-rise-in-india-7681521/",
+      "finding": "The India-specific summary highlights prompt engineering, LLMOps and data storytelling alongside collaboration and leadership skills.",
+      "scope": "India-specific LinkedIn member and hiring signal summary"
+    }
+  ],
+  "skills": [
+    {
+      "name": "AI and Machine Learning",
+      "aliases": [
+        "AI",
+        "artificial intelligence",
+        "machine learning",
+        "ML",
+        "deep learning",
+        "model training"
+      ],
+      "signal_score": 5,
+      "current_signal": "Strong growth signal",
+      "2030_outlook": "Expected to keep gaining importance",
+      "evidence": [
+        "wef2025",
+        "linkedin2026"
+      ],
+      "roles": [
+        "AI/ML Engineer",
+        "Machine Learning Engineer",
+        "Data Scientist"
+      ],
+      "one_line": "Learn Python, statistics, evaluation, and how to test models on real data.",
+      "project": "Build and evaluate a model for a clearly defined problem; compare with a simple baseline and explain errors.",
+      "salary_role_ids": [
+        "ml_engineer",
+        "data_scientist"
+      ],
+      "learning_path": [
+        "Python and data handling",
+        "Probability and statistics",
+        "Supervised learning and evaluation",
+        "Model deployment and monitoring"
+      ]
+    },
+    {
+      "name": "Data Analysis and Storytelling",
+      "aliases": [
+        "data analysis",
+        "data analytics",
+        "data storytelling",
+        "visualization",
+        "dashboards",
+        "business intelligence",
+        "Power BI",
+        "Tableau",
+        "pandas",
+        "NumPy",
+        "Excel",
+        "spreadsheet analysis"
+      ],
+      "signal_score": 4,
+      "current_signal": "Core cross-industry skill",
+      "2030_outlook": "Likely to remain broadly useful",
+      "evidence": [
+        "linkedin2026",
+        "wef2025"
+      ],
+      "roles": [
+        "Data Analyst",
+        "BI Analyst",
+        "Business Analyst"
+      ],
+      "one_line": "Turn messy data into a decision a real person can act on.",
+      "project": "Analyse a public retail dataset, identify trends, and present a dashboard plus three evidence-backed recommendations.",
+      "salary_role_ids": [
+        "data_analyst"
+      ],
+      "learning_path": [
+        "Spreadsheets and data quality",
+        "SQL basics",
+        "Python with pandas",
+        "Visualisation and communication"
+      ]
+    },
+    {
+      "name": "SQL and Database Skills",
+      "aliases": [
+        "SQL",
+        "database",
+        "DBMS",
+        "PostgreSQL",
+        "MySQL",
+        "querying",
+        "data modeling"
+      ],
+      "signal_score": 4,
+      "current_signal": "Core skill across data roles",
+      "2030_outlook": "Useful foundation; combine with analysis or engineering",
+      "evidence": [],
+      "roles": [
+        "Data Analyst",
+        "Data Engineer",
+        "BI Analyst"
+      ],
+      "one_line": "Learn to retrieve, join, validate, and explain data reliably.",
+      "project": "Design a small database for a campus service and answer operational questions with tested SQL queries.",
+      "salary_role_ids": [
+        "data_analyst",
+        "data_engineer"
+      ],
+      "learning_path": [
+        "SELECT and filtering",
+        "JOINs and aggregation",
+        "Schema design and constraints",
+        "Indexes and query reasoning"
+      ]
+    },
+    {
+      "name": "Data Engineering and Pipelines",
+      "aliases": [
+        "data engineering",
+        "ETL",
+        "ELT",
+        "pipelines",
+        "data warehouse",
+        "Apache Spark",
+        "orchestration"
+      ],
+      "signal_score": 4,
+      "current_signal": "Strong role-linked demand signal",
+      "2030_outlook": "Important where reliable data infrastructure is needed",
+      "evidence": [
+        "wef2025"
+      ],
+      "roles": [
+        "Data Engineer",
+        "Analytics Engineer"
+      ],
+      "one_line": "Build reliable pipelines that move, clean, validate, and prepare data.",
+      "project": "Build a reproducible CSV-to-database pipeline with validation checks, logging, and a short data-quality report.",
+      "salary_role_ids": [
+        "data_engineer"
+      ],
+      "learning_path": [
+        "Python and SQL",
+        "Data formats and validation",
+        "ETL pipeline design",
+        "Cloud and orchestration basics"
+      ]
+    },
+    {
+      "name": "Cybersecurity and Risk",
+      "aliases": [
+        "cybersecurity",
+        "security",
+        "network security",
+        "privacy",
+        "governance",
+        "risk",
+        "compliance"
+      ],
+      "signal_score": 5,
+      "current_signal": "Strong growth signal",
+      "2030_outlook": "Expected to rise with digitalisation and risk complexity",
+      "evidence": [
+        "wef2025",
+        "linkedin2026"
+      ],
+      "roles": [
+        "Security Analyst",
+        "Security Engineer",
+        "GRC Analyst"
+      ],
+      "one_line": "Understand systems, threats, access control, and how to reduce risk.",
+      "project": "Create a threat model for a fictional campus app and prioritise mitigations; use only safe, authorised lab exercises.",
+      "salary_role_ids": [],
+      "learning_path": [
+        "Networking and operating-system basics",
+        "Security fundamentals",
+        "Threat modelling",
+        "Incident response and governance"
+      ]
+    },
+    {
+      "name": "LLMs and Generative AI",
+      "aliases": [
+        "LLM",
+        "large language models",
+        "generative AI",
+        "GenAI",
+        "RAG",
+        "retrieval augmented generation",
+        "prompt engineering",
+        "LLMOps",
+        "agents"
+      ],
+      "signal_score": 5,
+      "current_signal": "Fast-moving growth signal",
+      "2030_outlook": "Opportunity is real, but tools and job requirements may shift quickly",
+      "evidence": [
+        "linkedin2026",
+        "wef2025",
+        "linkedin_india_2026"
+      ],
+      "roles": [
+        "AI Engineer",
+        "LLM Application Engineer",
+        "AI Product Engineer"
+      ],
+      "one_line": "Build useful AI applications and test accuracy, cost, privacy, and failure modes.",
+      "project": "Create a small retrieval-based question-answering tool over public documents and test it against questions with known answers.",
+      "salary_role_ids": [
+        "ml_engineer"
+      ],
+      "learning_path": [
+        "Python and APIs",
+        "Model behaviour and evaluation",
+        "Retrieval and grounding",
+        "Safety, cost, monitoring, and deployment"
+      ]
+    },
+    {
+      "name": "Statistics and Experimentation",
+      "aliases": [
+        "statistics",
+        "probability",
+        "hypothesis testing",
+        "A/B testing",
+        "causal inference",
+        "experimentation"
+      ],
+      "signal_score": 4,
+      "current_signal": "Durable analytical foundation",
+      "2030_outlook": "More useful when paired with domain knowledge and data tools",
+      "evidence": [
+        "wef2025"
+      ],
+      "roles": [
+        "Data Scientist",
+        "Product Analyst",
+        "Research Analyst"
+      ],
+      "one_line": "Reason about uncertainty, evidence, experiments, and misleading patterns.",
+      "project": "Analyse an experiment dataset, estimate uncertainty, and explain what the data can and cannot prove.",
+      "salary_role_ids": [
+        "data_scientist"
+      ],
+      "learning_path": [
+        "Descriptive statistics",
+        "Probability distributions",
+        "Inference and confidence intervals",
+        "Experiment design and causal thinking"
+      ]
+    },
+    {
+      "name": "Cloud and MLOps",
+      "aliases": [
+        "cloud",
+        "AWS",
+        "Azure",
+        "GCP",
+        "MLOps",
+        "deployment",
+        "monitoring",
+        "Docker",
+        "CI/CD"
+      ],
+      "signal_score": 4,
+      "current_signal": "Implementation and infrastructure skill",
+      "2030_outlook": "Useful as models and data products move into production",
+      "evidence": [
+        "wef2025",
+        "linkedin2026"
+      ],
+      "roles": [
+        "ML Engineer",
+        "Cloud Engineer",
+        "Data Engineer"
+      ],
+      "one_line": "Take a working project from a notebook into a repeatable, monitored service.",
+      "project": "Package a small model behind an API and document tests, versions, monitoring and rollback.",
+      "salary_role_ids": [
+        "ml_engineer",
+        "data_engineer"
+      ],
+      "learning_path": [
+        "Git and command line",
+        "APIs and environments",
+        "Containers and deployment",
+        "Monitoring and reproducibility"
+      ]
+    },
+    {
+      "name": "Programming Fundamentals",
+      "aliases": [
+        "programming",
+        "Python",
+        "C++",
+        "Java",
+        "algorithms",
+        "data structures",
+        "Git",
+        "debugging"
+      ],
+      "signal_score": 4,
+      "current_signal": "Foundational skill across technical roles",
+      "2030_outlook": "Stays valuable when paired with problem solving and software delivery",
+      "evidence": [
+        "wef2025"
+      ],
+      "roles": [
+        "Software Engineer",
+        "AI Engineer",
+        "Data Engineer"
+      ],
+      "one_line": "Write readable code, test assumptions, debug, and explain trade-offs.",
+      "project": "Build a command-line tool with input validation, tests, a README, and a Git history.",
+      "salary_role_ids": [
+        "data_engineer",
+        "ml_engineer"
+      ],
+      "learning_path": [
+        "Variables, control flow, and functions",
+        "Collections and file handling",
+        "Testing and debugging",
+        "Git and small complete projects"
+      ]
+    },
+    {
+      "name": "Communication and Data Storytelling",
+      "aliases": [
+        "communication",
+        "public speaking",
+        "presentation",
+        "stakeholder communication",
+        "writing",
+        "leadership",
+        "collaboration"
+      ],
+      "signal_score": 4,
+      "current_signal": "Growing complementary skill",
+      "2030_outlook": "Human skills remain valuable alongside technical capability",
+      "evidence": [
+        "linkedin2026",
+        "wef2025"
+      ],
+      "roles": [
+        "All AI & DS roles",
+        "Product Analyst",
+        "Consultant"
+      ],
+      "one_line": "Explain a technical result, its limits, and what someone should do next.",
+      "project": "Present one analysis in a 3-minute briefing with a chart, caveats, and a clear recommendation.",
+      "salary_role_ids": [
+        "data_analyst",
+        "data_scientist"
+      ],
+      "learning_path": [
+        "Audience and objective",
+        "Chart choice and clarity",
+        "Evidence and caveats",
+        "Short presentation and feedback"
+      ]
+    },
+    {
+      "name": "Green and Energy Data",
+      "aliases": [
+        "climate data",
+        "renewable energy",
+        "energy analytics",
+        "sustainability",
+        "environmental data"
+      ],
+      "signal_score": 3,
+      "current_signal": "Sector-linked emerging opportunity",
+      "2030_outlook": "Potential growth linked to energy and climate transitions; roles vary by sector",
+      "evidence": [
+        "wef2025"
+      ],
+      "roles": [
+        "Energy Data Analyst",
+        "Climate Data Analyst",
+        "Sustainability Analyst"
+      ],
+      "one_line": "Apply data skills to energy, emissions, and sustainability questions.",
+      "project": "Analyse public energy or emissions data and state the limits of comparisons across regions.",
+      "salary_role_ids": [
+        "data_analyst"
+      ],
+      "learning_path": [
+        "Data basics",
+        "Energy and climate indicators",
+        "Time-series analysis",
+        "Communication with uncertainty"
+      ]
+    }
+  ],
+  "roles": [
+    {
+      "id": "data_analyst",
+      "name": "Data Analyst / BI Analyst",
+      "experience": "All experience levels; market median, not a fresher guarantee",
+      "low_lpa": 4.0,
+      "high_lpa": 9.3,
+      "reference_lpa": 5.9,
+      "pay_label": "Median ₹5.9 LPA; middle 50% ₹4–9.3 LPA",
+      "source_id": "flexiple_da",
+      "caveat": "All-level median and range: do not read these as fresher-only pay. PayScale reports ₹4.13 L average total compensation for under one year, based on 576 salaries; that is a separate measure.",
+      "fit_skills": [
+        "data analysis",
+        "SQL",
+        "Python",
+        "Power BI",
+        "Tableau",
+        "visualization",
+        "communication",
+        "statistics"
+      ]
+    },
+    {
+      "id": "data_engineer",
+      "name": "Data Engineer",
+      "experience": "Entry-level band: 0–3 years",
+      "low_lpa": 5.0,
+      "high_lpa": 11.6,
+      "reference_lpa": 7.5,
+      "pay_label": "Entry median ₹7.5 LPA; middle 50% ₹5–11.6 LPA",
+      "source_id": "flexiple_de",
+      "caveat": "Compensation-record dataset; individual outcomes vary by company, city, skills and experience. This is not a rate paid for learning a skill.",
+      "fit_skills": [
+        "data engineering",
+        "SQL",
+        "Python",
+        "ETL",
+        "pipelines",
+        "databases",
+        "cloud",
+        "Spark"
+      ]
+    },
+    {
+      "id": "data_scientist",
+      "name": "Data Scientist",
+      "experience": "All experience levels; market median, not a fresher guarantee",
+      "low_lpa": 7.5,
+      "high_lpa": 26.3,
+      "reference_lpa": 14.2,
+      "pay_label": "Median ₹14.2 LPA; middle 50% ₹7.5–26.3 LPA",
+      "source_id": "flexiple_ds",
+      "caveat": "All-level data, so it includes experienced professionals; fresher compensation can be substantially lower. Instahyre reports roughly ₹6–10 LPA for freshers at many employers.",
+      "fit_skills": [
+        "statistics",
+        "Python",
+        "machine learning",
+        "data analysis",
+        "SQL",
+        "experimentation",
+        "visualization"
+      ]
+    },
+    {
+      "id": "ml_engineer",
+      "name": "AI / ML Engineer",
+      "experience": "Broad entry-level range; varies sharply by employer type",
+      "low_lpa": 6.0,
+      "high_lpa": 14.0,
+      "reference_lpa": 9.0,
+      "pay_label": "Broad entry-level range ₹6–14 LPA",
+      "source_id": "instahyre_ml",
+      "caveat": "This range spans employer types; the highest offers are not typical or guaranteed. Production-quality projects, fundamentals, and interview performance matter.",
+      "fit_skills": [
+        "AI",
+        "machine learning",
+        "Python",
+        "statistics",
+        "LLM",
+        "MLOps",
+        "deep learning",
+        "deployment"
+      ]
+    }
+  ],
+  "economic_shifts": [
+    {
+      "title": "AI adoption and information processing",
+      "signal": "Transformative through 2030",
+      "student_meaning": "Learn to use AI tools, but build foundations in data, evaluation, verification, and deployment.",
+      "source_ids": [
+        "wef2025",
+        "linkedin2026"
+      ]
+    },
+    {
+      "title": "Economic uncertainty and changing hiring",
+      "signal": "Employers expect business models and workforce needs to shift",
+      "student_meaning": "Prefer transferable foundations and a portfolio of real outcomes over chasing one short-lived tool.",
+      "source_ids": [
+        "wef2025"
+      ]
+    },
+    {
+      "title": "Cybersecurity, governance and compliance",
+      "signal": "Risk-management skills gaining importance",
+      "student_meaning": "Learn privacy, secure systems, data governance and responsible AI alongside technical skills.",
+      "source_ids": [
+        "wef2025",
+        "linkedin2026"
+      ]
+    },
+    {
+      "title": "Energy and climate transition",
+      "signal": "Sector-linked roles and skill needs expected to evolve",
+      "student_meaning": "Domain knowledge can differentiate an AI & DS student; explore energy, climate, healthcare and finance datasets.",
+      "source_ids": [
+        "wef2025"
+      ]
+    }
+  ]
+}

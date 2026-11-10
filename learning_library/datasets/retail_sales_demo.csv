@@ -1,0 +1,33 @@
+order_id,order_date,product,category,units,unit_price,region
+R001,2026-01-05,Notebook,Stationery,12,45,South
+R002,2026-01-05,Pen,Stationery,30,10,South
+R003,2026-01-12,Water Bottle,Accessories,8,220,East
+R004,2026-01-13,Notebook,Stationery,10,45,West
+R005,2026-01-18,Backpack,Accessories,4,850,South
+R006,2026-01-20,Pen,Stationery,45,10,East
+R007,2026-01-28,Water Bottle,Accessories,12,220,West
+R008,2026-02-02,Notebook,Stationery,16,45,North
+R009,2026-02-04,Backpack,Accessories,5,850,East
+R010,2026-02-08,Pen,Stationery,40,10,South
+R011,2026-02-11,Water Bottle,Accessories,7,220,North
+R012,2026-02-15,Notebook,Stationery,19,45,West
+R013,2026-02-18,Backpack,Accessories,6,850,South
+R014,2026-02-22,Pen,Stationery,52,10,North
+R015,2026-02-24,Water Bottle,Accessories,11,220,East
+R016,2026-03-01,Notebook,Stationery,14,45,East
+R017,2026-03-04,Backpack,Accessories,7,850,West
+R018,2026-03-07,Pen,Stationery,47,10,West
+R019,2026-03-10,Water Bottle,Accessories,15,220,South
+R020,2026-03-14,Notebook,Stationery,20,45,South
+R021,2026-03-18,Backpack,Accessories,3,850,North
+R022,2026-03-20,Pen,Stationery,49,10,East
+R023,2026-03-23,Water Bottle,Accessories,13,220,West
+R024,2026-03-27,Notebook,Stationery,18,45,North
+R025,2026-04-02,Backpack,Accessories,8,850,East
+R026,2026-04-05,Pen,Stationery,56,10,South
+R027,2026-04-08,Water Bottle,Accessories,17,220,North
+R028,2026-04-11,Notebook,Stationery,22,45,West
+R029,2026-04-16,Backpack,Accessories,6,850,South
+R030,2026-04-20,Pen,Stationery,54,10,West
+R031,2026-04-23,Water Bottle,Accessories,16,220,East
+R032,2026-04-27,Notebook,Stationery,24,45,South

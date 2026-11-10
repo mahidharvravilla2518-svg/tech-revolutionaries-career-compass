@@ -1,0 +1,242 @@
+{
+  "meta": {
+    "version": 1,
+    "note": "Project briefs describe simulated practice scenarios. Included datasets, when marked synthetic, are fictional and must not be treated as evidence about the real job market or real people. Each challenge has an optional next step using public data or a more realistic deployment."
+  },
+  "projects": [
+    {
+      "skill": "AI and Machine Learning",
+      "title": "Forecast weekly product demand",
+      "problem_user": "A small retailer wants to plan stock before busy weeks and reduce avoidable overstock or shortages.",
+      "data_source_label": "Included synthetic retail sales CSV (practice data)",
+      "data_source_url": "",
+      "dataset_file": "learning_library/datasets/retail_sales_demo.csv",
+      "task": "Build a simple baseline forecast from past weekly sales. Compare it with a moving-average baseline and explain when the forecast should not be trusted.",
+      "success_criteria": [
+        "Separate training and evaluation periods by time; do not randomly mix future rows into training.",
+        "Compare the model with a simple baseline using at least one suitable error metric.",
+        "Show actual versus predicted values in a chart.",
+        "State at least two limitations, such as the small synthetic sample or missing promotions and holidays."
+      ],
+      "deliverables": ["A reproducible notebook or Python script", "Actual-versus-predicted chart", "A short result note with metric and limitations", "README with setup steps"],
+      "limitations": "The included sales are synthetic and deliberately small. Results demonstrate workflow only; they are not a real retailer forecast or proof of business savings.",
+      "next_step": "Repeat the workflow on a suitably licensed public time-series dataset, then test how holidays, promotions, and changing demand affect performance.",
+      "book_resources": [
+        {"title": "An Introduction to Statistical Learning with Applications in Python", "url": "https://www.statlearning.com/", "topic": "Model evaluation, regression, and time-series-related reasoning where appropriate"},
+        {"title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow", "url": "https://www.oreilly.com/library/view/hands-on-machine-learning/9781098125967/", "topic": "Train/evaluate workflows and practical model checks"}
+      ]
+    },
+    {
+      "skill": "Data Analysis and Storytelling",
+      "title": "Find the story in retail sales",
+      "problem_user": "A shop owner wants to know which product categories and weeks contribute most to sales, without being misled by one unusual day.",
+      "data_source_label": "Included synthetic retail sales CSV (practice data)",
+      "data_source_url": "",
+      "dataset_file": "learning_library/datasets/retail_sales_demo.csv",
+      "task": "Clean the data, calculate category and weekly summaries, visualize patterns, and write one recommendation supported by the data.",
+      "success_criteria": [
+        "Check missing values, duplicates, data types, and implausible quantities or prices.",
+        "Show at least two clear charts that answer specific questions.",
+        "Separate observed patterns from explanations you cannot verify.",
+        "Include one decision recommendation and one important caveat."
+      ],
+      "deliverables": ["Cleaned data script or notebook", "Two annotated charts", "One-page decision brief", "README describing the data"],
+      "limitations": "The data are synthetic. A real retailer would need a longer time period and information about stockouts, promotions, refunds, and seasonality.",
+      "next_step": "Ask a real organization for permission to analyse anonymized data, or choose a public retail dataset and document its license and limitations.",
+      "book_resources": [
+        {"title": "Python Crash Course", "url": "https://nostarch.com/python-crash-course-3rd-edition", "topic": "Python practice and small scripts"},
+        {"title": "An Introduction to Statistical Learning with Applications in Python", "url": "https://www.statlearning.com/", "topic": "Evidence, variation, and avoiding overconfident conclusions"}
+      ]
+    },
+    {
+      "skill": "SQL and Database Skills",
+      "title": "Create a simple sales reporting database",
+      "problem_user": "A small shop keeps customer orders and product details separately and needs repeatable answers to business questions.",
+      "data_source_label": "Included synthetic retail sales CSV (practice data)",
+      "data_source_url": "",
+      "dataset_file": "learning_library/datasets/retail_sales_demo.csv",
+      "task": "Design a small relational schema, import the practice rows, and write queries for weekly revenue, category performance, and repeat purchases.",
+      "success_criteria": [
+        "Use sensible primary keys and data types.",
+        "Explain how the tables relate and avoid storing the same fact unnecessarily.",
+        "Write at least five readable SQL queries with clear aliases.",
+        "Cross-check one query result against a manually calculated sample."
+      ],
+      "deliverables": ["Schema diagram or table definitions", "SQL setup and query file", "Example query outputs", "Short note on data quality"],
+      "limitations": "The practice dataset is small and synthetic. It does not represent a real customer base, and repeat-purchase conclusions would be meaningless outside this exercise.",
+      "next_step": "Add constraints and indexes, then build a small dashboard on top of the database.",
+      "book_resources": [
+        {"title": "PostgreSQL official tutorial", "url": "https://www.postgresql.org/docs/current/tutorial.html", "topic": "Tables, queries, joins, aggregates, and relational basics"}
+      ]
+    },
+    {
+      "skill": "Data Engineering and Pipelines",
+      "title": "Build a reliable daily sales pipeline",
+      "problem_user": "A shop receives daily CSV exports and wants a repeatable process that cleans and combines them without silently hiding problems.",
+      "data_source_label": "Included synthetic retail sales CSV (practice data)",
+      "data_source_url": "",
+      "dataset_file": "learning_library/datasets/retail_sales_demo.csv",
+      "task": "Create a pipeline that reads raw rows, validates required fields, normalizes dates and numeric columns, logs rejected rows, and writes a clean output.",
+      "success_criteria": [
+        "Running the pipeline twice produces consistent output without duplicate rows.",
+        "Invalid rows are reported with a reason rather than silently dropped.",
+        "At least three automated checks cover required fields, numeric values, and date parsing.",
+        "The README explains how to rerun the pipeline."
+      ],
+      "deliverables": ["Pipeline code", "Validation report", "Automated tests", "README and example output"],
+      "limitations": "This is a local single-file exercise, not a production cloud pipeline. It does not address access control, orchestration, or real-time ingestion.",
+      "next_step": "Schedule the pipeline, add structured logs, and store outputs in a database with a documented recovery procedure.",
+      "book_resources": [
+        {"title": "Designing Data-Intensive Applications", "url": "https://dataintensive.net/", "topic": "Data systems, reliability, and trade-offs"}
+      ]
+    },
+    {
+      "skill": "Cybersecurity and Risk",
+      "title": "Prioritize defensive security alerts",
+      "problem_user": "A small IT team receives more alerts than it can investigate at once and needs a transparent way to triage them.",
+      "data_source_label": "Included synthetic security-alert CSV (practice data)",
+      "data_source_url": "",
+      "dataset_file": "learning_library/datasets/security_alerts_demo.csv",
+      "task": "Create a defensive triage report using severity, asset importance, and evidence confidence. Explain why a score supports prioritization but does not prove an incident.",
+      "success_criteria": [
+        "Document the scoring rule and why each factor is included.",
+        "Flag missing or conflicting fields for human review.",
+        "Show the top items and explain at least two ranking trade-offs.",
+        "Do not include exploit instructions or claim the dataset reflects real threats."
+      ],
+      "deliverables": ["Triage script or notebook", "Prioritized report", "Scoring explanation", "Limitations and escalation note"],
+      "limitations": "All alerts are synthetic. A score is a decision aid, not a substitute for incident response, validation, or authorized security processes.",
+      "next_step": "Compare the fields with a public defensive catalog such as CISA's Known Exploited Vulnerabilities catalog and document which fields are missing.",
+      "book_resources": [
+        {"title": "CISA Known Exploited Vulnerabilities Catalog", "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog", "topic": "Public defensive vulnerability prioritization reference"}
+      ]
+    },
+    {
+      "skill": "LLMs and Generative AI",
+      "title": "Build a grounded document helper",
+      "problem_user": "Students need quick answers from a small set of course or public documents, but unsupported answers can mislead them.",
+      "data_source_label": "Five or more public or user-authorized documents chosen by the learner",
+      "data_source_url": "https://www.nist.gov/itl/ai-risk-management-framework",
+      "dataset_file": "",
+      "task": "Build a small retrieval-based question-answering prototype that returns source snippets and says when the documents do not contain an answer.",
+      "success_criteria": [
+        "Create at least ten test questions, including questions not answerable from the documents.",
+        "Show a citation or source snippet for every substantive answer.",
+        "Measure the number of answers supported by the source set using a written rubric.",
+        "Document privacy, prompt-injection, outdated-content, and hallucination risks."
+      ],
+      "deliverables": ["Working prototype", "Ten-question evaluation set", "Results table", "README with limitations and data handling"],
+      "limitations": "A small test set cannot establish general reliability. Do not upload private student data or rely on the prototype for high-stakes decisions.",
+      "next_step": "Compare retrieval settings, improve failure messages, and test with new questions written by someone who did not build the system.",
+      "book_resources": [
+        {"title": "Designing Machine Learning Systems", "url": "https://www.oreilly.com/library/view/designing-machine-learning/9781098107956/", "topic": "Data quality, evaluation, monitoring, and responsible deployment"},
+        {"title": "NIST AI Risk Management Framework", "url": "https://www.nist.gov/itl/ai-risk-management-framework", "topic": "Risk identification, measurement, and governance"}
+      ]
+    },
+    {
+      "skill": "Statistics and Experimentation",
+      "title": "Evaluate a small product experiment",
+      "problem_user": "A product team changed a page layout and wants to know whether the new version appears to improve sign-up rates.",
+      "data_source_label": "Included synthetic A/B experiment CSV (practice data)",
+      "data_source_url": "",
+      "dataset_file": "learning_library/datasets/ab_test_demo.csv",
+      "task": "Compare conversion rates for two variants, quantify uncertainty, and explain why a difference in this sample may not prove a lasting causal effect.",
+      "success_criteria": [
+        "Define the outcome and denominator before calculating rates.",
+        "Report sample sizes and conversion rates for both groups.",
+        "Use an appropriate uncertainty estimate or statistical test and explain it simply.",
+        "Discuss practical significance, randomization assumptions, and at least one limitation."
+      ],
+      "deliverables": ["Reproducible analysis", "Comparison chart", "Short evidence-based recommendation", "Assumptions and limitations"],
+      "limitations": "The observations are synthetic and intentionally do not represent an actual product experiment. Statistical significance alone does not establish business value.",
+      "next_step": "Plan a real experiment with clear assignment, privacy safeguards, an outcome chosen in advance, and a sample-size plan.",
+      "book_resources": [
+        {"title": "An Introduction to Statistical Learning with Applications in Python", "url": "https://www.statlearning.com/", "topic": "Statistical inference and careful model interpretation"}
+      ]
+    },
+    {
+      "skill": "Cloud and MLOps",
+      "title": "Package and monitor a small model",
+      "problem_user": "A team has a notebook model that works locally but cannot easily reproduce its environment or see whether predictions degrade.",
+      "data_source_label": "Use the synthetic sales dataset or a public dataset with a clear license",
+      "data_source_url": "https://archive.ics.uci.edu/",
+      "dataset_file": "learning_library/datasets/retail_sales_demo.csv",
+      "task": "Move a small baseline model into a repeatable script or local API with pinned dependencies, tests, logging, and a simple input-drift check.",
+      "success_criteria": [
+        "A fresh environment can follow the README to reproduce the result.",
+        "Invalid inputs return a clear error rather than a silent failure.",
+        "Automated tests cover normal and invalid inputs.",
+        "Document monitoring limits and a rollback or disable procedure."
+      ],
+      "deliverables": ["Packaged code or local API", "Dependency file", "Tests", "Example logs and operations README"],
+      "limitations": "Local packaging is not production deployment. Do not expose an unauthenticated endpoint or upload secrets to a public repository.",
+      "next_step": "Deploy to a controlled test environment, add access control and monitoring, and define how to roll back a bad model version.",
+      "book_resources": [
+        {"title": "Designing Machine Learning Systems", "url": "https://www.oreilly.com/library/view/designing-machine-learning/9781098107956/", "topic": "Deployment, monitoring, and ML system design"}
+      ]
+    },
+    {
+      "skill": "Programming Fundamentals",
+      "title": "Turn a messy CSV into a useful report",
+      "problem_user": "A student or small business worker receives a CSV and needs a repeatable summary without manually editing every row.",
+      "data_source_label": "Included synthetic retail sales CSV (practice data)",
+      "data_source_url": "",
+      "dataset_file": "learning_library/datasets/retail_sales_demo.csv",
+      "task": "Write a command-line Python program that validates input, handles missing or invalid values, computes a summary, and writes an output report.",
+      "success_criteria": [
+        "Use functions with clear responsibilities and meaningful names.",
+        "Handle a missing file and malformed rows with friendly messages.",
+        "Include at least five tests for normal and edge cases.",
+        "Explain how to run the program in a short README."
+      ],
+      "deliverables": ["Python source file", "Tests", "Example output", "README with setup and usage"],
+      "limitations": "The small sample is synthetic. The first version prioritizes correctness and clarity over speed or large-file support.",
+      "next_step": "Add command-line arguments, type hints, logging, and support for a second input format.",
+      "book_resources": [
+        {"title": "Python Crash Course", "url": "https://nostarch.com/python-crash-course-3rd-edition", "topic": "Python foundations and project structure"}
+      ]
+    },
+    {
+      "skill": "Communication and Data Storytelling",
+      "title": "Give a three-minute evidence briefing",
+      "problem_user": "A non-technical decision-maker needs a concise explanation of a data finding and what action, if any, is justified.",
+      "data_source_label": "Included synthetic retail sales CSV (practice data)",
+      "data_source_url": "",
+      "dataset_file": "learning_library/datasets/retail_sales_demo.csv",
+      "task": "Create one chart and a three-minute briefing that communicates the question, evidence, uncertainty, and a practical next step.",
+      "success_criteria": [
+        "The chart has a clear title, units, labels, and a stated time period.",
+        "The main claim is directly supported by the chart.",
+        "The speaker distinguishes observation from interpretation.",
+        "The briefing includes one caveat and one actionable next step."
+      ],
+      "deliverables": ["One chart", "A three-minute talk or recording", "A short written summary", "Feedback and a revision"],
+      "limitations": "Presentation quality does not make synthetic numbers real. The task assesses explanation and evidence use, not public-speaking charisma.",
+      "next_step": "Repeat the briefing for a different audience and revise it based on what they understood or misunderstood.",
+      "book_resources": [
+        {"title": "Storytelling with Data", "url": "https://www.storytellingwithdata.com/books", "topic": "Choosing clear visuals and communicating a data point"}
+      ]
+    },
+    {
+      "skill": "Green and Energy Data",
+      "title": "Compare energy trends responsibly",
+      "problem_user": "A community group wants to understand how energy sources change over time without confusing absolute totals with per-person measures.",
+      "data_source_label": "Practice with the included synthetic energy dataset; continue with Our World in Data",
+      "data_source_url": "https://ourworldindata.org/energy",
+      "dataset_file": "learning_library/datasets/energy_demo.csv",
+      "task": "Create a time-series comparison of energy sources, check units and missing years, and explain why different normalizations answer different questions.",
+      "success_criteria": [
+        "Label the metric, unit, geography, and period in every chart.",
+        "Check missing years and whether series use comparable definitions.",
+        "Compare absolute values with at least one normalized measure where the data supports it.",
+        "Avoid making causal claims from a descriptive trend alone."
+      ],
+      "deliverables": ["Data-cleaning script", "Two charts", "A short findings note", "Source and definition notes"],
+      "limitations": "The included values are synthetic and do not describe real energy production. Cross-country comparisons require careful attention to units and definitions.",
+      "next_step": "Replace the practice data with a public Our World in Data series and record the download date, indicator, and definition.",
+      "book_resources": [
+        {"title": "Our World in Data — Energy", "url": "https://ourworldindata.org/energy", "topic": "Public energy indicators and context"}
+      ]
+    }
+  ]
+}
